@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form style="height: 350px; width: 400px; border: 1px solid #ddd;background-color: aqua; " action="">
+        <input style="margin: 5px; height: 15%; width: 90%;" type="text" id="sdt" placeholder="SDT">
+        <input style="margin: 5px; height: 15%; width: 90%;" type="text" name="" id="name" placeholder="TEN">
+        <input style="margin: 5px; height: 15%; width: 90%;" type="text" id="email" placeholder="EMAIL">
+        <button style="margin: 5px; height: 15%; width: 90%; text-align: center;" onclick="onClick()">nut</button>
+    </form>
+    <a style="text-decoration: none;" href="./index1.html">LINK</a>
+    <script>
+        function onClick() {
+            var SDT =document.getElementById('sdt')
+            var NAME=document.getElementById('name')
+            var EMAIL=document.getElementById('email')
+            check(SDT,NAME,EMAIL);
+            
+        }
+        function check(sdt,name,email){
+            if(sdt.value.length !==10){
+               alert("SAI-SDT");
+            }
+            if(name.value == ''){
+                alert("SAI-TEN");
+            }
+            if(!email.value.includes('@') || !email.value.includes('.')){
+                alert("SAI-EMAIL");
+            }
+            else alert("THANH-CONG");
+        }     
+    </script>
+</body> 
+</html>
+
+
